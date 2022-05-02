@@ -1,0 +1,196 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script:wght@600&family=Ms+Madi&family=Pacifico&family=Raleway:wght@100&display=swap');
+
+
+
+*{
+    margin: 0px;
+    padding: 0%;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue:hsl(243, 100%, 93%);
+    --grey-blue:hsl(229, 7%, 55%);
+    --dark-blue:hsl(228, 56%, 26%);
+    --very-dark-blue:hsl(229, 57%, 11%);
+}
+
+body{
+    background-color: var(--very-dark-blue);
+}
+
+.container{
+    background: url(./images/bg-desktop.png) no-repeat bottom;
+background-size: contain;
+display: grid;
+align-items: center;
+grid-template-rows: minmax(250px,1fr) 120px;
+height: 100vh;
+justify-content: stretch;
+justify-items:center;
+width: 100%;
+padding: 24px;
+}
+
+.box1{
+    display: grid;
+    gap: 29px;
+    justify-content: stretch;
+    align-items: end;
+    max-width: 950px;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.left{
+    height: 122px;
+    background-color: var(--dark-blue);
+    padding: 20px;
+   
+    width: 220px;
+    border-radius: 8px 89px 7px 7px
+}
+
+
+.logo{
+    height: 27%;
+    width: 47%;
+    margin-bottom: 20px;
+}
+
+.files .file{
+    background-color: var(--very-dark-blue);
+    margin-right: 12px;
+    height: 36px;
+    width: 33px;
+    border-radius: 6px;
+    border: none;
+
+}
+
+.file img{
+    height: 15px;
+}
+
+.box2{
+   display: flex;
+   flex-direction: column;
+   color: white;
+}
+.notifi{
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 65px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    align-self: flex-end;
+    margin-right: 6px;
+    font-size: 6px;
+}
+.notifi::before{
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid white ;
+    border-top: 10px solid white;
+    content: "";
+    position: absolute;
+    right: 0px;
+    top:23px;
+    
+}
+
+.notifi span{
+    color: black;
+    font-weight:bolder;
+    margin-right: 8px;
+    font-size: large;
+
+}
+.rangebox{
+
+background-color: var(--dark-blue);
+border-radius: 9px;
+display: grid;
+gap: 12px;
+grid-template-rows: 1fr 1fr;
+padding: 24px;
+width: 100%;
+
+}
+.rangebox span{
+    color: var(--blue);
+    font-size: 14;
+}
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 12px;
+  }
+#myBar {
+    width: 80%;
+    height: 10px;
+    border-radius: 12px;
+   background: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    text-align: center;
+    line-height: 30px; 
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #myBar .pointer{
+ 
+      background-color: white;
+      height: 10px;
+      width: 10px;
+      border-radius: 26px;
+      margin-right: 0.8px;
+  }
+ .data{
+     display: flex;
+     justify-content: space-between;
+ }
+
+
+
+ @media screen and (max-width:650px){
+     .box1{
+         display: grid;
+         grid-template-rows: 1fr 1fr;
+         grid-template-columns: 1fr;
+     }
+
+    .container{
+        background-image: url(./images/bg-mobile.png);
+    }
+
+    .notifi{
+        background-color: white;
+        color: black;
+        height: 30px;
+        width: 65px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+        top: 100px;
+        align-self: center;
+        margin-right: 6px;
+        font-size: 6px;
+    }
+    .notifi::before{
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+ }
+
+}
